@@ -13,9 +13,9 @@ class TestClickAccount:
         driver.find_element(*SellaBurgersLocators.LOGIN_SUBMIT_BUTTON).click()
 
         driver.find_element(*SellaBurgersLocators.ACCOUNT_BUTTON).click()
-        WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SellaBurgersLocators.LOGAUT_BUTTON))
+        WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SellaBurgersLocators.LOGOUT_BUTTON))
 
-        assert driver.find_element(*SellaBurgersLocators.LOGAUT_BUTTON).is_displayed()
+        assert driver.find_element(*SellaBurgersLocators.LOGOUT_BUTTON).is_displayed()
 
 
 

@@ -4,9 +4,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 
-class TestLogaut:
+class TestLogout:
 
-    def test_logaut_from_account(self, driver):
+    def test_logout_from_account(self, driver):
         driver.find_element(*SellaBurgersLocators.ACCOUNT_BUTTON).click()
 
         driver.find_element(*SellaBurgersLocators.LOGIN_EMAIL_FIELD).send_keys(Data.LOGIN)
@@ -14,9 +14,9 @@ class TestLogaut:
         driver.find_element(*SellaBurgersLocators.LOGIN_SUBMIT_BUTTON).click()
 
         driver.find_element(*SellaBurgersLocators.ACCOUNT_BUTTON).click()
-        WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SellaBurgersLocators.LOGAUT_BUTTON))
+        WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SellaBurgersLocators.LOGOUT_BUTTON))
 
-        driver.find_element(*SellaBurgersLocators.LOGAUT_BUTTON).click()
+        driver.find_element(*SellaBurgersLocators.LOGOUT_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SellaBurgersLocators.REGISTRATION_LINK))
 
         assert driver.find_element(*SellaBurgersLocators.REGISTRATION_LINK).is_displayed()
