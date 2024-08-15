@@ -36,9 +36,9 @@ class SellaBurgersLocators:
     BREAD_LIST = (By.XPATH, ".//h2[contains(text(), 'Булки')]") # раздел булок в конструкторе
     CRATER_BREAD = (By.XPATH, ".//img[@alt = 'Краторная булка N-200i']") # иконка выбора краторной булки
 
-    GALACTIC_SAUCE_CALORIES = (By.XPATH, ".//p[contains(text(), '99')]")
-    BEAF_METEOR_CALORIES = (By.XPATH, ".//p[contains(text(), '2674')]")
-    CRATER_BREAD_CALORIES = (By.XPATH, ".//p[contains(text(), '420')]")
+    GALACTIC_SAUCE_CALORIES = (By.XPATH, ".//p[contains(text(), '99')]") # калории в окне галактического соуса
+    BEAF_METEOR_CALORIES = (By.XPATH, ".//p[contains(text(), '2674')]")  # калории в окне говяжьего метеорита
+    CRATER_BREAD_CALORIES = (By.XPATH, ".//p[contains(text(), '420')]")  # калории в окне краторной булки
 
 
 
